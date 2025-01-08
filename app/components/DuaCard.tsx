@@ -1,8 +1,6 @@
-import { Category, Dua } from "../types/types"
+import { Dua } from "../types/types"
 import Image from "next/image"
-interface Content{
-    cat_id : number
-}
+
 export const DuaCard : React.FC<{dua: Dua[] | null, content: number}> = ({dua , content})=>{
        const filter  = dua?.filter(data=> data.cat_id === content)
        console.log(filter, 'filter')

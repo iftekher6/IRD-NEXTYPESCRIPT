@@ -2,7 +2,6 @@
 import type { Metadata } from "next";
 import {  Inter,Poppins } from "next/font/google";
 import "./globals.css";
-import { useState } from "react";
 import { SettingsProvider } from "./context/SettingContext";
 import { Header } from "./components/Header";
 

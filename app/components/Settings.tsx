@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image"
-import { useState, useEffect, useRef } from "react"
+import {  useEffect, useRef } from "react"
 import { useSettings } from "../context/SettingContext";
 export const Settings = ()=>{
 //    const [isOpen , setIsOpen] = useState(true)
@@ -30,28 +30,28 @@ export const Settings = ()=>{
            <h3 className="font-inter font-bold text-[20px]">Settings</h3>
            <div className="flex flex-col space-y-4 mt-10">
             <div className="flex justify-start items-center space-x-3 bg-[#F7F8FA] p-2 rounded-[5px]">
-               <Image src='assets/icons/language.svg' alt='Home-btn' width={30} height={73}  />
+               <Image src='assets/icons/language.svg' alt='language-btn' width={30} height={73}  />
                <span className="font-inter font-400 text-[#868686]">Language Settings</span>
 
             </div>
             <div className="flex justify-start items-center space-x-3  bg-[#F7F8FA] p-2 rounded-[5px]">
-               <Image src='assets/icons/general.svg' alt='Home-btn' width={30} height={73}  />
+               <Image src='assets/icons/general.svg' alt='general-btn' width={30} height={73}  />
                <span className="font-inter font-400 text-[#868686]">General Settings</span>
 
             </div>
             <div className="flex justify-start items-center space-x-3  bg-[#F7F8FA] p-2 rounded-[5px]">
-               <Image src='assets/icons/font.svg' alt='Home-btn' width={30} height={73}  />
+               <Image src='assets/icons/font.svg' alt='font-btn' width={30} height={73}  />
                <span className="font-inter font-400 text-[#868686]">Font Settings</span>
 
             </div>
             <div className="flex justify-start items-center space-x-3  bg-[#F7F8FA] p-2 rounded-[5px] border-l-[5px] border-[#1FA45B]">
-               <Image src='assets/icons/menu.svg' alt='Home-btn' width={30} height={73}  />
+               <Image src='assets/icons/menu.svg' alt='menu-btn' width={30} height={73}  />
                <span className="font-inter font-semibold text-[#1FA45B]">Appearence Settings</span>
 
             </div>
             <div className="flex justify-between items-center space-x-3 bg-[#F7F8FA] p-3 w-[260px] rounded-[5px]">
                <span className="font-inter font-400 text-[#868686]">Night Mode</span>
-               <Image src='assets/icons/toggle.svg' alt='Home-btn' width={25} height={73}  />
+               <Image src='assets/icons/toggle.svg' alt='toggle-btn' width={25} height={73}  />
 
             </div>
 

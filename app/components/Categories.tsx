@@ -1,17 +1,17 @@
 "use client"
 import { useState } from "react";
-
+import Image from "next/image";
 import { Category, Dua, Subcategory } from "../types/types";
 import { DuaCard } from "./DuaCard";
 
-interface Cat{
-  cat_id : number
-}
+// interface Cat{
+//   cat_id : number
+// }
 
 export const Categories : React.FC<{categories: Category[], dua: Dua[],sub: Subcategory[] }> = ({categories , dua, sub})=>{
    
  const [selectedCat, setSelectedCat] = useState(categories[0]) 
- const [clicked, setClicked] = useState<Boolean>(false)
+
  const [activeCategoryId, setActiveCategoryId] = useState<number | null>(null)
  console.log(selectedCat, 'se')
 
@@ -27,7 +27,7 @@ export const Categories : React.FC<{categories: Category[], dua: Dua[],sub: Subc
 
   const handleOnClick = (data : any)=>{
     setSelectedCat(data)
-    setClicked((prev)=> !prev)
+  
     handleClick(data.cat_id)
   }
     
@@ -40,7 +40,7 @@ export const Categories : React.FC<{categories: Category[], dua: Dua[],sub: Subc
           <div className="flex flex-col justify-center items-center mt-2">
             {/* searchBar */}
             <div className="flex w-[95%] rounded-[7px] border-[1.5px] bg-['#E2E2E2'] p-1 space-x-3 ">
-                <img src="assets/icons/searchCat.svg" />
+                <Image src="assets/icons/searchCat.svg" alt='searchIcon'/>
               <input type="search" placeholder="Search by Categories" className="w-full bg-transparent outline-none"  />
             </div>
         
@@ -53,10 +53,10 @@ export const Categories : React.FC<{categories: Category[], dua: Dua[],sub: Subc
             
              categories.map(data=> (
               <>
-               <div key={data.id} onClick={event=> handleOnClick(data )} className="flex w-[275px] justify-between items-center space-x-5   hover:bg-[#E8F0F5] hover:rounded-[10px] p-3  cursor-pointer ">
+               <div key={data.id} onClick={()=> handleOnClick(data )} className="flex w-[275px] justify-between items-center space-x-5   hover:bg-[#E8F0F5] hover:rounded-[10px] p-3  cursor-pointer ">
             
                 <div className="flex justify-center items-center space-x-2">
-                <img src='assets/icons/human.svg' width={50}  />
+                <Image src='assets/icons/human.svg' width={50} alt='humanIcon'  />
                 <div className="flex flex-col">
               
                       <p className="text-[14px] text-nowrap text-[#393939] font-[600] font-inter">{data.cat_name_en}</p>

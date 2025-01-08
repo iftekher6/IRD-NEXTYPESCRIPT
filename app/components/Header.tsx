@@ -1,5 +1,6 @@
 "use client"
 import { useSettings } from "../context/SettingContext";
+import Image from "next/image";
 
  export const Header =()=>{
     const { toggleSettings } = useSettings();
@@ -11,13 +12,13 @@ import { useSettings } from "../context/SettingContext";
    <div className="flex w-[300px] rounded-[7px] border-[1.5px] bg-[#FFFFFF] p-1 space-x-3 ">
             
             <input type="search" placeholder="Search by Dua Name" className="w-full p-2 bg-transparent outline-none"  />
-            <img className="bg-[#F3F4F6] w-10 p-[8px] rounded-[6px]" src="assets/icons/searchCat.svg"  />
+            <Image className="bg-[#F3F4F6] w-10 p-[8px] rounded-[6px]" src="assets/icons/searchCat.svg" alt='searchIcon' />
           </div>
          {/* profile */}
           <div className="flex space-x-2">
-          <img className=" w-12 " src="assets/icons/profile.svg"  />
-          <img className=" w-3 " src="assets/icons/dropdown.svg"  />
-          <img onClick={toggleSettings} className=" w-10 "  src="assets/icons/settings.svg"  />
+          <Image className=" w-12 " src="assets/icons/profile.svg" alt="profileIcon" />
+          <Image className=" w-3 " src="assets/icons/dropdown.svg"  alt="dropdownIcon"/>
+          <Image onClick={toggleSettings} className=" w-10 " alt="settingsIcon" src="assets/icons/settings.svg"  />
           
           </div>
      </div>
