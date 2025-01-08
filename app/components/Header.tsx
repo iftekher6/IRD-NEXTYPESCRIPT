@@ -12,13 +12,13 @@ import Image from "next/image";
    <div className="flex w-[300px] rounded-[7px] border-[1.5px] bg-[#FFFFFF] p-1 space-x-3 ">
             
             <input type="search" placeholder="Search by Dua Name" className="w-full p-2 bg-transparent outline-none"  />
-            <Image className="bg-[#F3F4F6] w-10 p-[8px] rounded-[6px]" src="assets/icons/searchCat.svg" alt='searchIcon' />
+            <Image className="bg-[#F3F4F6] w-10 p-[8px] rounded-[6px]" src="assets/icons/searchCat.svg" alt='searchIcon' width={20} height={20}/>
           </div>
          {/* profile */}
           <div className="flex space-x-2">
-          <Image className=" w-12 " src="assets/icons/profile.svg" alt="profileIcon" />
-          <Image className=" w-3 " src="assets/icons/dropdown.svg"  alt="dropdownIcon"/>
-          <Image onClick={toggleSettings} className=" w-10 " alt="settingsIcon" src="assets/icons/settings.svg"  />
+          <Image className=" w-12 " src="assets/icons/profile.svg" alt="profileIcon"  width={20} height={20}/>
+          <Image className=" w-3 " src="assets/icons/dropdown.svg"  alt="dropdownIcon" width={20} height={20}/>
+          <Image onClick={toggleSettings} className=" w-10 " alt="settingsIcon" src="assets/icons/settings.svg" width={20} height={20} />
           
           </div>
      </div>

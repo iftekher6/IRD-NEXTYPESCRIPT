@@ -9,9 +9,9 @@ export const DuaCard : React.FC<{dua: Dua[] | null, content: number}> = ({dua , 
         
         <div  className="flex flex-col w-[950px] h-[560px] overflow-y-scroll space-y-2 mt-[85px]">
         { filter?.map((data, index)  =>(
-            <>
+             <div key={index}>
          
-  <div key={data.dua_id || index} className="bg-white p-5 rounded-[10px] border-[0.5px]">
+  <div  className="bg-white p-5 rounded-[10px] border-[0.5px]">
   <h1><span className="text-[#1FA45B]">Section: </span>{data.dua_name_en} </h1>
 </div>
 <div className="flex flex-col bg-white p-5 rounded-[10px] border-[0.5px] space-y-2">
@@ -36,7 +36,7 @@ export const DuaCard : React.FC<{dua: Dua[] | null, content: number}> = ({dua , 
 </div>
 
             
-</>
+</div>
            )) }
            </div>
         
