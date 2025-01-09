@@ -5,7 +5,7 @@ import { Settings } from "./components/Settings";
 export default async function Home() {
 
  
-  const response = await fetch('http://localhost:3000/api/database',{
+  const response = await fetch(`${process.env.URL}/api/database`,{
     cache : 'force-cache'
   })
   const data = await response.json()
