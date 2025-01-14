@@ -9,7 +9,7 @@ const NavBar = ()=>{
     <div className="space-y-2">
       
    
-    <Image src='assets/icons/allDua.svg' alt='allDua-btn' width={35} height={73} />
+    <Image className="hover:hidden" src='assets/icons/allDua.svg' alt='allDua-btn' width={35} height={73} />
     <Image src='assets/icons/Memorize.svg' alt='memorize-btn'  width={35} height={73} />
     <Image src='assets/icons/Bookmark.svg'alt='bookmark-btn'  width={35} height={73} />
     <Image src='assets/icons/Ruqyah.svg' alt='ruqyah-btn' width={35} height={73} />
